@@ -69,7 +69,6 @@ namespace zich
         friend istream &operator>>(istream &a, Matrix &b);
 
         // 6 math operators
-        //friend Matrix operator+(const Matrix &a, const Matrix &b);
         Matrix &operator+=(const Matrix &a);
         Matrix operator+(const Matrix &b);
         friend Matrix operator+(const Matrix &a);
@@ -94,10 +93,10 @@ namespace zich
 
 
         // increcment decrecment
-        Matrix operator++(int); // postfix
-        Matrix &operator++();  // prefix
-        Matrix operator--(int); // postfix
-        Matrix &operator--(); // prefix
+        Matrix operator++(int); //postfix i++
+        Matrix &operator++();  //prefix ++i
+        Matrix operator--(int); //postfix  i--
+        Matrix &operator--(); //prefix --i
 
 
         

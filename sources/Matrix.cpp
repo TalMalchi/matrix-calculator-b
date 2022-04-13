@@ -41,7 +41,7 @@ using namespace zich;
             unsigned int min_index=1;
             unsigned int max_index=0;
             vector<double> temp;
-            getline(a,ans);
+            getline(a,ans); //get the first line
             //cout << ans << endl;
             if (ans[0]!='[' || ans[ans.size()-1]!=']'){
                 cout << ans << endl;
@@ -62,14 +62,14 @@ using namespace zich;
                         min_index= i+4; 
                         }
                     }
-
+                    //check col number 
                     if(col_num>0 && ans[i]==']'){
                         if(col_max==0){
                             col_max=col_num;
                         }
                         if(col_num!=col_max){
                             cout << ans << endl;
-                            throw invalid_argument("WRONG INPUT -  Col numbers isn't equal");
+                            throw invalid_argument("WRONG INPUT -  Col number isn't equal");
                         }
                         
                         row_num++;
@@ -77,13 +77,9 @@ using namespace zich;
                         
                     }
                 }
-                // for (size_t i = 0; i < temp.size(); i++)
-                // {
-                //     cout << temp[i] ;
-                // }
-                
                 
                 //cout << endl <<row_num << " "<< col_max << " " << temp.size()<<endl;
+                //init the new matrix 
                 b = Matrix(temp,row_num,col_max);
                return a; 
             }
